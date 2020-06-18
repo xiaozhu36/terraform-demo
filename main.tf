@@ -55,3 +55,7 @@
 //    }
 //  ]
 //}
+
+provider "alicloud" {}
+
+provider "aws" {}
