@@ -6,7 +6,8 @@ data "alicloud_vpcs" "default" {
 }
 
 resource "alicloud_security_group" "demo" {
-  name = "cloud-demo-test"
+  count = 2
+  name = "cloud-demo-test-${count.index}"
   vpc_id = data.alicloud_vpcs.default.ids.0
 }
 provider "aws" {
