@@ -1,0 +1,12 @@
+//import "tfplan"
+
+//main = rule {
+//    all tfplan.resource.alicloud_vpc as _, vpcs {
+//        all vpcs as _, r {
+//            (length(r.applied.tags) else 0) >= 1
+//        }
+//    }
+//}
+
+hour = 4
+main = rule { hour >= 0 and hour < 12 }
