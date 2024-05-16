@@ -30,8 +30,8 @@ resource "alicloud_slb_listener" "listener" {
   health_check_connect_port = 20
   healthy_threshold         = 8
   unhealthy_threshold       = 8
-  health_check_timeout      = 5
-  health_check_interval     = 8
+  health_check_timeout      = 10
+  health_check_interval     = 10
   health_check_http_code    = "http_2xx,http_3xx"
   x_forwarded_for {
     retrive_slb_ip = true
