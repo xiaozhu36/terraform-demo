@@ -43,9 +43,9 @@ resource "alicloud_slb_listener" "listener" {
   request_timeout = 80
   idle_timeout    = 30
   server_certificate_id = alicloud_slb_server_certificate.foo.id
-#  lifecycle {
-#    ignore_changes = [acl_id, description]
-#  }
+  lifecycle {
+    ignore_changes = [acl_id, description]
+  }
 }
 
 resource "alicloud_slb_acl" "listener" {
