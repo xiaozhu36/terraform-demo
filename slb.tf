@@ -11,7 +11,7 @@ resource "alicloud_slb_load_balancer" "listener" {
   load_balancer_name   = "${var.name}-${random_integer.default.result}"
   internet_charge_type = "PayByTraffic"
   address_type         = "internet"
-  instance_charge_type = "PostPaid"
+  instance_charge_type = "PayByCLCU"
 }
 
 resource "alicloud_slb_listener" "listener" {
